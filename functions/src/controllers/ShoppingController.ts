@@ -38,8 +38,9 @@ type User = {
     // USER INFO
     totalSpent: number
     numPurchases: number
-    cart: Map<Sku[], number>
-    purchases: Map<Sku[], number>
+    cart: Map<Sku, number>
+    purchases: Map<Sku[], number[]>
+    favorites: Sku[]
 
     // MISC
     id: string

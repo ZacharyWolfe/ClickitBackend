@@ -22,14 +22,8 @@ const tokenValidation = async (
         request.headers.authorization.startsWith('Bearer ')
     ) {
         token = request.headers.authorization.split('Bearer ')[1]
-        response
-            .status(200)
-            .send({ message: 'Authorized. Token is valid via header.' })
     } else if (request.cookies) {
         token = request.cookies.__session
-        response
-            .status(200)
-            .send({ message: 'Authorized. Token is valid via cookie.' })
     } else {
         response.status(403).send({ error: 'Unauthorized. Token is invalid.' })
         return

@@ -69,4 +69,4 @@ app.delete('/remove_user_purchase', remove_user_purchase as any)
 
 app.get('/get_products', get_products as any)
 
-exports.api = onRequest({ cors: true }, app)
+exports.api = onRequest({ cors: true}, app)
