@@ -14,6 +14,7 @@ export const getToken = async (request: Request, response: Response) => {
     const uid = userToken?.uid
 
     if (!userToken || !uid) {
+        response.status(403).send({ error: 'Invalid Token or UID. Cannot Create User' })
         return
     }
 

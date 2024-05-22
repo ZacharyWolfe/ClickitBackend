@@ -35,10 +35,10 @@ app.use(express.json())
 
 *******************************/
 
-app.post('/create_user', createUser as any)
-app.get('/get_current_user', getCurrentUser as any)
-app.patch('/update_user', updateUser as any)
-app.delete('/delete_user', deleteUser as any)
+app.post  ('/create_user',           createUser            as any)
+app.get   ('/get_current_user',      getCurrentUser        as any)
+app.patch ('/update_user',           updateUser            as any)
+app.delete('/delete_user',           deleteUser            as any)
 
 /** *****************************
 
@@ -46,11 +46,11 @@ app.delete('/delete_user', deleteUser as any)
 
 *******************************/
 
-app.post('/add_to_cart', add_to_cart as any)
-app.get('/get_current_cart', get_current_cart as any)
-app.patch('/update_cart_quantity', update_cart_quantity as any)
-app.delete('/remove_from_cart', remove_from_cart as any)
-app.patch('/checkout_cart', checkout_cart as any)
+app.post  ('/add_to_cart',           add_to_cart           as any)
+app.get   ('/get_current_cart',      get_current_cart      as any)
+app.patch ('/update_cart_quantity',  update_cart_quantity  as any)
+app.delete('/remove_from_cart',      remove_from_cart      as any)
+app.patch ('/checkout_cart',         checkout_cart         as any)
 
 /** *****************************
 
@@ -58,8 +58,8 @@ app.patch('/checkout_cart', checkout_cart as any)
 
 *******************************/
 
-app.get('/get_current_purchases', get_current_purchases as any)
-app.delete('/remove_user_purchase', remove_user_purchase as any)
+app.get   ('/get_current_purchases', get_current_purchases as any)
+app.delete('/remove_user_purchase',  remove_user_purchase  as any)
 
 /** *****************************
 
@@ -67,6 +67,6 @@ app.delete('/remove_user_purchase', remove_user_purchase as any)
 
 *******************************/
 
-app.get('/get_products', get_products as any)
+app.get   ('/get_products',          get_products          as any)
 
 exports.api = onRequest({ cors: true}, app)

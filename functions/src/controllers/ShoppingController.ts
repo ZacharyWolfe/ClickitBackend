@@ -13,7 +13,7 @@ import { SHOE_COLLECTION, USER_COLLECTION } from '..'
 import { Request, Response } from 'express'
 import { getToken } from './getToken'
 
-type User = {
+export type User = {
     // PERSONAL INFO
     firstName: string
     lastName: string
@@ -49,7 +49,7 @@ type User = {
     photoURL: string
 }
 
-interface Sku {
+export interface Sku {
     id: string
     name: string
     image: string
@@ -65,7 +65,7 @@ interface Sku {
     manufacturer?: string
 }
 
-/** ********************************
+/**********************************
 
     CHECKOUT CART ENDPOINTS
 
@@ -151,7 +151,7 @@ export const remove_user_purchase = async (
     }
 }
 
-/** ********************************
+/**********************************
 
     SHOPPING CART ENDPOINTS
 
